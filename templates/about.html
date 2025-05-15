@@ -1,0 +1,30 @@
+
+<html>
+<head>
+  <title>Data Journalism - Math vs. Income</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Data Journalism - Math Scores vs. Average Income per State</h1>
+  {% include 'header.html' %}
+  <p>This projects look to see if there is any correlation between 4th and 8th grade math test scores and average income across all<br>
+  50 states. The map below is color coded so that each state is red for low test scores and blue for high test scores (the average of 4th and 8th<br>
+  with a gradient in between. In addition to the color of each state, 
+  </p>
+  <div id="usa_map">
+    {% include 'USA.svg' %}
+  </div>
+
+  <div>
+    <form action="/year" method="GET">
+      <label for="year">Choose a year:</label><br>
+      <select name="year" id="year_select">
+      </select>
+      <input type="submit" value="Submit">
+    <form>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>
